@@ -4947,10 +4947,15 @@ a {
 
 .tab.active .icon-box-2.blue {
   background-color: var(--primary);
+  color: var(--accent-color);
 }
 
 .tab.active .icon-box-2.blue i {
-  color: var(--text-color);
+  color: var(--accent-color);
+}
+
+.tab.active .icon-box-2.blue span {
+  color: var(--accent-color);
 }
 
 .tab h5 {
