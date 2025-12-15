@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" href="image/favicon.png">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.2/animation_utility.css" />
+    <style>
+        .icon-3d {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+            max-width: 100%;
+            height: auto;
+        }
+        .hover-effect:hover .icon-3d {
+            transform: translateY(-15px) scale(1.15) rotate3d(1, 1, 0, 15deg);
+            filter: drop-shadow(0 25px 15px rgba(0,0,0,0.2));
+        }
+        .icon-3d-container {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+        .card-stat {
+            overflow: visible !important; /* Permitir que a animação saia do card se necessário */
+        }
+    </style>
+    <title>Bitelo - Homepage</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div id="header" class="fixed-top mx-auto" style="max-width: 1770px;">
+        <div class="mx-auto align-items-center bg-header" style="max-width: 1770px;">
+            <nav class="navbar navbar-expand-xl">
+                <div class="container-fluid ps-3">
+                    <div class="logo-container">
+                        <a class="navbar-brand" href="#"><img src="logos/logo_sem_fundo.png" alt="Prefeitura Barra dos Coqueiros" class="img-fluid" style="max-height: 60px;"></a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered accent-color-2"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-xl-0 gap-xl-4 gap-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">A Prefeitura</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Secretarias</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Transparência
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Receitas</a></li>
+                                    <li><a class="dropdown-item" href="#">Despesas</a></li>
+                                    <li><a class="dropdown-item" href="#">Licitações</a></li>
+                                    <li><a class="dropdown-item" href="#">Concursos</a></li>
+                                    <li><a class="dropdown-item" href="#">Legislação</a></li>
+                                </ul>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Serviços</a>
+                            </li>
+                        </ul>
+                        <div class="w-max-content mx-xl-0 mx-auto d-flex gap-2 align-items-center">
+                             <!-- Accessibility & Search Placeholders -->
+                             <div class="d-none d-xl-flex gap-2">
+                                <button class="btn btn-sm btn-outline-secondary" title="Aumentar Fonte">A+</button>
+                                <button class="btn btn-sm btn-outline-secondary" title="Alto Contraste"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                             </div>
+                             
+                            <a href="#" class="btn btn-accent">
+                                <span>Portal do Servidor</span>
+                                <div class="icon-box">
+                                    <i class="rtmicon rtmicon-user"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <div class="section mt-5">
+            <div class="mx-auto d-flex justify-content-center align-items-center" style="max-width: 1770px;">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col col-xl-8 mb-3 bg-banner">
+                        <div class="video-banner-container">
+                            <video autoplay muted loop playsinline class="video-iframe-bg" style="object-fit: cover;">
+                                <source src="video/drone_v1 (720p).mp4" type="video/mp4">
+                            </video>
+                            <div class="video-banner-overlay"></div>
+                        </div>
+                        <div class="d-flex flex-column gap-3" style="position: relative; z-index: 1;">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="bg-title hero-tag scrollanimation animated fadeInUp adr-5">
+                                    <img src="image/Vector 2.png" class="img-fluid" alt="" style="filter: brightness(0) invert(1);">
+                                    <h6 class="m-0">Prefeitura de Barra dos Coqueiros</h6>
+                                </div>
+                                <div class="position-relative">
+                                    <div class="hero-title-wrap">
+                                        <h1 class="hero-title scrollanimation animated fadeInUp adr-5 adl-1">
+                                            Portal da<br>Transparência
+                                        </h1>
+                                        <p class="hero-subtitle scrollanimation animated fadeInUp adr-5 adl-2">
+                                            Consulte IPTU, folha de pagamento, programas sociais e informações sobre casas populares em um só lugar, com dados sempre atualizados.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-relative">
+                                <img src="criativos/coracao.png" class="img-fluid float-hero" alt="" style="opacity: 0.8; max-width: 300px;">
+                            </div>
+                            <div class="d-flex flex-xl-row flex-column gap-3 w-max-content mt-2">
+                                <a href="#" class="btn btn-accent scrollanimation animated fadeInUp adr-5 adl-3">
+                                    <span>Acesso Rápido</span>
+                                    <div class="icon-box">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                    </div>
+                                </a>
+                                <a href="#" class="btn-hero-outline scrollanimation animated fadeInUp adr-5 adl-4">
+                                    <span>Fale Conosco</span>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="criativos/mega-fone.png" class="img-fluid float-hero-2" alt="">
+                        <div class="social-container mt-md-0 mt-3 scrollanimation animated fadeInUp adr-5 adl-3">
+                            <a href="#" class="social-item">
+                                <i class="fa-brands fa-xs fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="fa-brands fa-xs fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-item">
+                                <i class="fa-brands fa-xs fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 mb-3">
+                        <div class="position-relative h-100">
+                            <img src="criativos/imgi_4_3220ae141269945.62505afd2a6bd.png" class="img-fluid h-100" alt=""
+                                style="aspect-ratio: 3/4; border-radius: 20px; object-fit: cover; filter: blur(1px);">
+                            <div class="position-absolute banner-cta-pos">
+                                <div
+                                    class="d-flex flex-xl-row flex-column flex-wrap gap-2 justify-content-center align-items-center text-center scrollanimation animated fadeInUp adr-5">
+                                    <span class="w-max-content btn-accent-2 btn-hero active">IPTU 2025</span>
+                                    <span class="w-max-content btn-accent-2 btn-hero">Folha de Pagamento</span>
+                                    <span class="w-max-content btn-accent-2 btn-hero">Diário Oficial</span>
+                                    <span class="w-max-content btn-accent-2 btn-hero">Habita Barra</span>
+                                    <span class="w-max-content btn-accent-2 btn-hero">Concurso e Processo Seletivo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Banner -->
+
+        <!-- Acesso Rápido -->
+        <div class="section">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-3 align-items-center mb-5">
+                    <div class="bg-title second scrollanimation animated fadeInUp adr-5">
+                         <h6 class="m-0">Serviços Online</h6>
+                    </div>
+                    <h3 class="text-center">Acesso Rápido</h3>
+                </div>
+                <div class="row row-cols-xl-3 row-cols-md-2 row-cols-1">
+                    <div class="col mb-3">
+                        <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/iptu.png" class="icon-3d" alt="IPTU Icon">
+                            </div>
+                            <h5>IPTU 2025</h5>
+                            <p class="small">Emissão de boletos, 2ª via e consulta de débitos.</p>
+                        </a>
+                    </div>
+                    <div class="col mb-3">
+                         <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/portal-servidor.png" class="icon-3d" alt="Servidor Icon">
+                            </div>
+                            <h5>Portal do Servidor</h5>
+                            <p class="small">Contracheque, férias e informes de rendimento.</p>
+                        </a>
+                    </div>
+                    <div class="col mb-3">
+                         <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/contratos.png" class="icon-3d" alt="Licitações Icon">
+                            </div>
+                            <h5>Licitações e Contratos</h5>
+                            <p class="small">Consulte editais, resultados e contratos vigentes.</p>
+                        </a>
+                    </div>
+                    <div class="col mb-3">
+                         <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/nota-fiscal.png" class="icon-3d" alt="Nota Fiscal Icon">
+                            </div>
+                            <h5>Nota Fiscal Eletrônica</h5>
+                            <p class="small">Emissão e consulta de NFS-e.</p>
+                        </a>
+                    </div>
+                     <div class="col mb-3">
+                         <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/concurso.png" class="icon-3d" alt="Concursos Icon">
+                            </div>
+                            <h5>Concursos e Seleções</h5>
+                            <p class="small">Editais abertos, inscrições e resultados.</p>
+                        </a>
+                    </div>
+                     <div class="col mb-3">
+                         <a href="#" class="card-stat h-100 d-flex flex-column align-items-center text-center gap-3 p-4 hover-effect">
+                            <div class="icon-3d-container">
+                                <img src="images/icon/ouvidoria.png" class="icon-3d" alt="Ouvidoria Icon">
+                            </div>
+                            <h5>Ouvidoria</h5>
+                            <p class="small">Denúncias, reclamações e sugestões.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Acesso Rápido -->
+
+        <!-- Painel de Indicadores -->
+        <div class="d-flex flex-column gap-3 align-items-center mb-5">
+           <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+               <img src="image/Vector 7.png" class="img-fluid" alt="">
+               <h6 class="m-0">Transparência</h6>
+           </div>
+           <h3 class="text-center text-dark scrollanimation animated fadeInDown adr-5">Painel de Indicadores</h3>
+                    <p class="text-center text-dark scrollanimation animated fadeInDown adr-5">Dados atualizados em tempo real</p>
+       </div>
+        <div class="section bg-banner py-5 justify-content-center" style="background-image: url('criativos/imgi_23_123bf4141269945.62505afd2c6a4.png'); min-height: 500px;">
+            <div class="r-container">
+                <div class="row row-cols-md-4 row-cols-1">
+                    <div class="col mb-3">
+                        <div class="card-stat bg-white">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <h3 class="number" data-target="15" data-duration="1000">0</h3>
+                                <h3>M</h3>
+                            </div>
+                            <h5>Receitas do Mês (R$)</h5>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card-stat bg-white">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <h3 class="number" data-target="12" data-duration="1000">0</h3>
+                                <h3>M</h3>
+                            </div>
+                            <h5>Despesas do Mês (R$)</h5>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card-stat bg-white">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <h3 class="number" data-target="2500" data-duration="1000">0</h3>
+                                <h3>+</h3>
+                            </div>
+                            <h5>Servidores Ativos</h5>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card-stat bg-white">
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <h3 class="number" data-target="45" data-duration="1000">0</h3>
+                            </div>
+                            <h5>Obras em Andamento</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Painel de Indicadores -->
+
+        <!-- Transparência Ativa -->
+        <div class="section position-relative">
+             <div class="circle-gradient offer"></div>
+            
+             <!-- Content -->
+            <div class="d-flex flex-column gap-5">
+                <div class="d-flex flex-column align-items-center gap-3">
+                    <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                        <img src="image/Vector 4.png" class="img-fluid" alt="">
+                        <h6 class="m-0">Transparência Ativa</h6>
+                    </div>
+                    <h3 class="text-center scrollanimation animated fadeInDown adr-5">
+                        Acesso à Informação <br>
+                        por Categorias
+                    </h3>
+                </div>
+                <!-- Swiper content -->
+                <div class="overflow-visible">
+                    <div class="swiper swiperImage overflow-visible" style="z-index: 1;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide p-2">
+                                <div class="card-swiper">
+                                    <div class="icon-box-2 blue mb-3">
+                                        <i class="fa-solid fa-sitemap fa-2x"></i>
+                                    </div>
+                                    <h4 class="accent-color-primary">Estrutura Organizacional</h4>
+                                    <p class="accent-color-primary">Organograma, secretarias, competências e contatos dos setores.</p>
+                                    <div class="w-max-content">
+                                        <a href="#" class="btn btn-accent-4">
+                                            <span>Acessar</span>
+                                            <div class="icon-box blue">
+                                                <i class="rtmicon rtmicon-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p-2">
+                                <div class="card-swiper">
+                                    <div class="icon-box-2 blue mb-3">
+                                        <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
+                                    </div>
+                                    <h4 class="accent-color-primary">Receitas e Despesas</h4>
+                                    <p class="accent-color-primary">Detalhamento da arrecadação e aplicação dos recursos públicos.</p>
+                                    <div class="w-max-content">
+                                        <a href="#" class="btn btn-accent-4">
+                                            <span>Acessar</span>
+                                            <div class="icon-box blue">
+                                                <i class="rtmicon rtmicon-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p-2">
+                                <div class="card-swiper">
+                                    <div class="icon-box-2 blue mb-3">
+                                        <i class="fa-solid fa-users-gear fa-2x"></i>
+                                    </div>
+                                    <h4 class="accent-color-primary">Pessoal</h4>
+                                    <p class="accent-color-primary">Quadro de servidores, remunerações, diárias e passagens.</p>
+                                    <div class="w-max-content">
+                                        <a href="#" class="btn btn-accent-4">
+                                            <span>Acessar</span>
+                                            <div class="icon-box blue">
+                                                <i class="rtmicon rtmicon-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p-2">
+                                <div class="card-swiper">
+                                    <div class="icon-box-2 blue mb-3">
+                                        <i class="fa-solid fa-helmet-safety fa-2x"></i>
+                                    </div>
+                                    <h4 class="accent-color-primary">Obras Públicas</h4>
+                                    <p class="accent-color-primary">Acompanhe o andamento, medições e valores das obras.</p>
+                                    <div class="w-max-content">
+                                        <a href="#" class="btn btn-accent-4">
+                                            <span>Acessar</span>
+                                            <div class="icon-box blue">
+                                                <i class="rtmicon rtmicon-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide p-2">
+                                <div class="card-swiper">
+                                    <div class="icon-box-2 blue mb-3">
+                                        <i class="fa-solid fa-handshake fa-2x"></i>
+                                    </div>
+                                    <h4 class="accent-color-primary">Convênios</h4>
+                                    <p class="accent-color-primary">Acordos firmados com a União, Estado e outras entidades.</p>
+                                    <div class="w-max-content">
+                                        <a href="#" class="btn btn-accent-4">
+                                            <span>Acessar</span>
+                                            <div class="icon-box blue">
+                                                <i class="rtmicon rtmicon-arrow-right"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Transparência Ativa -->
+
+        <!-- Notícias -->
+        <div class="section">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex flex-md-row flex-column justify-content-between">
+                        <div class="d-flex flex-column gap-2" style="max-width: 500px;">
+                            <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                                <img src="image/Vector 9.png" class="img-fluid" alt="">
+                                <h6 class="m-0">Notícias</h6>
+                            </div>
+                            <h3 class="scrollanimation animated fadeInDown adr-5">Últimas Atualizações</h3>
+                        </div>
+                        <div class="align-self-md-end" style="max-width: 300px;">
+                            <p class="scrollanimation animated fadeInDown adr-5">
+                                Acompanhe as ações e novidades da Prefeitura.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-md-3 row-cols-1">
+                        <div class="col mb-3 wrapper-news active">
+                            <img src="criativos/obras.jpg" class="img-fluid news-img" alt="">
+                            <a href="#" class="card-news">
+                                <div class="date-news">
+                                    <i class="rtmicon rtmicon-calendar"></i>
+                                    <p>11 Dez, 2025</p>
+                                </div>
+                                <h5>Prefeitura Inicia Obras de Pavimentação no Bairro Novo</h5>
+                                <p class="text-news">Infraestrutura urbana recebe investimento de R$ 2 milhões...</p>
+                            </a>
+                        </div>
+                        <div class="col mb-3 wrapper-news">
+                            <img src="criativos/vacina.jpg" class="img-fluid news-img" alt="">
+                            <a href="#" class="card-news">
+                                <div class="date-news">
+                                    <i class="rtmicon rtmicon-calendar"></i>
+                                    <p>10 Dez, 2025</p>
+                                </div>
+                                <h5>Saúde: Campanha de Vacinação atinge meta em 2 dias</h5>
+                                <p class="text-news">Mais de 5 mil pessoas foram imunizadas no fim de semana...</p>
+                            </a>
+                        </div>
+                        <div class="col mb-3 wrapper-news">
+                            <img src="criativos/matricula.jpg" class="img-fluid news-img" alt="">
+                            <a href="#" class="card-news">
+                                <div class="date-news">
+                                    <i class="rtmicon rtmicon-calendar"></i>
+                                    <p>08 Dez, 2025</p>
+                                </div>
+                                <h5>Educação: Matrículas abertas para a rede municipal</h5>
+                                <p class="text-news">Pais e responsáveis podem realizar o cadastro online...</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mb-xl-0 mb-3 ms-auto">
+                        <a href="#" class="btn btn-accent">
+                            <span>Ver Todas as Notícias</span>
+                            <div class="icon-box">
+                                <i class="rtmicon rtmicon-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Notícias -->
+
+        <!-- Agenda e Eventos -->
+        <div class="section">
+            <div class="bg-why-choose">
+                <div class="row row-cols-md-2 row-cols-1 h-100">
+                    <div class="col mb-3">
+                        <div class="d-flex flex-column justify-content-between h-100">
+                            <div class="d-flex flex-column gap-3 mb-xl-0 mb-3" style="max-width: 475px;">
+                                <div class="d-flex flex-column gap-2">
+                                    <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                                        <img src="image/Vector 10.png" class="img-fluid" alt="">
+                                        <h6 class="m-0">Calendário</h6>
+                                    </div>
+                                    <h3 class="scrollanimation animated fadeInDown adr-5">Agenda Oficial do Município</h3>
+                                </div>
+                                <p>
+                                    Fique por dentro das datas de audiências públicas, prazos fiscais, inaugurações e eventos oficiais da Prefeitura.
+                                </p>
+                                <div class="w-max-content">
+                                    <a href="#" class="btn btn-accent">
+                                        <span>Ver Agenda Completa</span>
+                                        <div class="icon-box">
+                                            <i class="rtmicon rtmicon-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <div class="d-flex flex-row align-items-center gap-2">
+                                    <i class="fa-regular fa-calendar-check fa-2x accent-color-primary"></i>
+                                    <div>
+                                        <h4 class="m-0">Próximos</h4>
+                                        <h6 class="m-0">Eventos Confirmados</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div id="tab-duration" class="d-flex flex-column gap-3">
+                            <img src="criativos/eventos/ldo.jpg" class="img-fluid class-duration"
+                                data-duration="img-1" style="aspect-ratio: 16/9; border-radius: 12px;" alt="">
+                            <img src="criativos/eventos/vencimento-iptu.jpg" class="img-fluid class-duration"
+                                data-duration="img-2" style="aspect-ratio: 16/9; border-radius: 12px;" alt="">
+                            <img src="criativos/eventos/desfile].jpg" class="img-fluid class-duration"
+                                data-duration="img-3" style="aspect-ratio: 16/9; border-radius: 12px;" alt="">
+                            <img src="criativos/eventos/inauguracao.jpg" class="img-fluid class-duration"
+                                data-duration="img-4" style="aspect-ratio: 16/9; border-radius: 12px;" alt="">
+                            <img src="criativos/vacina.jpg" class="img-fluid class-duration"
+                                data-duration="img-5" style="aspect-ratio: 16/9; border-radius: 12px;" alt="">
+                            <div class="tab active" id="img-1" data-duration="img-1">
+                                <div class=" icon-box-2 blue">
+                                    <span class="fw-bold">25/08</span>
+                                </div>
+                                <h5>Audiência Pública da LDO 2026</h5>
+                            </div>
+                            <div class="tab" id="img-2" data-duration="img-2">
+                                <div class=" icon-box-2 blue">
+                                    <span class="fw-bold">30/08</span>
+                                </div>
+                                <h5>Vencimento Cota Única IPTU</h5>
+                            </div>
+                            <div class="tab" id="img-3" data-duration="img-3">
+                                <div class=" icon-box-2 blue">
+                                    <span class="fw-bold">07/09</span>
+                                </div>
+                                <h5>Desfile Cívico da Independência</h5>
+                            </div>
+                            <div class="tab" id="img-4" data-duration="img-4">
+                                <div class=" icon-box-2 blue">
+                                    <span class="fw-bold">15/09</span>
+                                </div>
+                                <h5>Inauguração da UBS Centro</h5>
+                            </div>
+                            <div class="tab" id="img-5" data-duration="img-5">
+                                <div class=" icon-box-2 blue">
+                                    <span class="fw-bold">20/09</span>
+                                </div>
+                                <h5>Campanha de Multivacinação</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Agenda e Eventos -->
+
+        <!-- Participação Popular -->
+        <div class="section position-relative">
+            <div class="r-container" style="margin-bottom: 12em;">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                            <img src="image/Vector 5.png" class="img-fluid" alt="">
+                            <h6 class="m-0">Participação Social</h6>
+                        </div>
+                        <h3 class="text-center scrollanimation animated fadeInDown adr-5">
+                            Sua Voz Faz a Diferença
+                        </h3>
+                    </div>
+                    <div class="row row-cols-md-3 row-cols-1 contain-testi">
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3 h-100">
+                                <div class="card-testimonial active h-100">
+                                    <div class="d-flex flex-row align-items-center gap-2 mb-3">
+                                        <div class="icon-box-2 blue">
+                                            <i class="fa-solid fa-bullhorn"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="m-0">Ouvidoria</h6>
+                                            <p class="m-0 small">Fala Cidadão</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-testimonial">
+                                        Envie denúncias, reclamações, elogios ou sugestões para a administração municipal.
+                                    </p>
+                                     <a href="#" class="btn btn-sm btn-outline-primary mt-3">Acessar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3 h-100">
+                                <div class="card-testimonial h-100">
+                                    <div class="d-flex flex-row align-items-center gap-2 mb-3">
+                                        <div class="icon-box-2 blue">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="m-0">e-SIC</h6>
+                                            <p class="m-0 small">Acesso à Informação</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-testimonial">
+                                        Solicite informações públicas que não estão disponíveis no portal (Lei de Acesso à Informação).
+                                    </p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mt-3">Solicitar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3 h-100">
+                                <div class="card-testimonial h-100">
+                                    <div class="d-flex flex-row align-items-center gap-2 mb-3">
+                                        <div class="icon-box-2 blue">
+                                            <i class="fa-solid fa-comments"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="m-0">Consultas Públicas</h6>
+                                            <p class="m-0 small">Participe das Decisões</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-testimonial">
+                                        Opine sobre projetos de lei, obras e orçamento participativo do município.
+                                    </p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary mt-3">Participar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle-gradient left"></div>
+            <div class="circle-gradient right"></div>
+
+            <!-- Como Usar os Serviços -->
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                            <img src="image/Vector 6.png" class="img-fluid" alt="">
+                            <h6 class="m-0">Tutoriais</h6>
+                        </div>
+                        <h3 class="text-center scrollanimation animated fadeInDown adr-5">
+                            Aprenda a Usar os Serviços
+                        </h3>
+                    </div>
+                    <div class="row row-cols-xl-3 row-cols-1 contain-work">
+                        <div class="col mb-3">
+                            <div class="wrapper-it-works">
+                                <div class="card-it-works">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="title">IPTU</p>
+                                        <h4>Emitir 2ª Via</h4>
+                                    </div>
+                                    <p>
+                                        Veja o passo a passo para emitir a segunda via do seu IPTU sem sair de casa.
+                                    </p>
+                                </div>
+                                <div class="line">
+                                    <div class="icon-box-3">
+                                        <h6>01</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="wrapper-it-works">
+                                <div class="card-it-works active">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="title">Servidor</p>
+                                        <h4>Acessar Contracheque</h4>
+                                    </div>
+                                    <p>
+                                        Aprenda como fazer login no portal do servidor e baixar seu holerite mensal.
+                                    </p>
+                                </div>
+                                <div class="line active">
+                                    <div class="icon-box-3">
+                                        <h6>02</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="wrapper-it-works">
+                                <div class="card-it-works">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="title">Ouvidoria</p>
+                                        <h4>Fazer Denúncia</h4>
+                                    </div>
+                                    <p>
+                                        Saiba como registrar uma manifestação na ouvidoria de forma anônima e segura.
+                                    </p>
+                                </div>
+                                <div class="line">
+                                    <div class="icon-box-3">
+                                        <h6>03</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Como Usar os Serviços -->
+        </div>
+        <!-- End Participação Popular -->
+
+        <!-- Dados Abertos -->
+        <div class="section bg-banner" style="background-image: url('criativos/dados-abertos.jpg'); min-height: 600px;">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex flex-md-row flex-column justify-content-between">
+                        <div class="d-flex flex-column gap-2" style="max-width: 400px;">
+                            <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                                <img src="image/Vector 10.png" class="img-fluid" alt="">
+                                <h6 class="m-0">Dados Abertos</h6>
+                            </div>
+                            <h3 class="text-white scrollanimation animated fadeInDown adr-5">Transparência para Desenvolvedores e Pesquisadores</h3>
+                        </div>
+                        <div style="max-width: 300px;">
+                            <p class="text-white scrollanimation animated fadeInDown adr-5">
+                                Acesse dados brutos em formatos abertos (CSV, JSON, XML) para análise e desenvolvimento de aplicações.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-md-3 row-cols-1 wrapper-team">
+                        <div class="col mb-4">
+                            <div class="card-team h-100 p-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <i class="fa-solid fa-file-csv fa-3x accent-color-primary"></i>
+                                    <h4>Dados em CSV</h4>
+                                    <p>Baixe planilhas completas de receitas, despesas, contratos e servidores.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary w-max-content">Download</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card-team active h-100 p-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <i class="fa-solid fa-code fa-3x text-white"></i>
+                                    <h4>API Pública</h4>
+                                    <p>Integre seu sistema com nossa API RESTful para consulta de dados em tempo real.</p>
+                                    <a href="#" class="btn btn-sm btn-light w-max-content">Documentação</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="card-team h-100 p-4">
+                                <div class="d-flex flex-column gap-3">
+                                    <i class="fa-solid fa-book fa-3x accent-color-primary"></i>
+                                    <h4>Dicionário de Dados</h4>
+                                    <p>Entenda a estrutura das tabelas e o significado de cada campo disponível.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary w-max-content">Acessar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Dados Abertos -->
+
+        <!-- Faqs -->
+        <div class="section">
+            <div class="r-container">
+                <div class="d-flex flex-column gap-5">
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                            <img src="image/Vector 8.png" class="img-fluid" alt="">
+                            <h6 class="m-0">Perguntas Frequentes</h6>
+                        </div>
+                        <h3 class="text-center scrollanimation animated fadeInDown adr-5">
+                            Dúvidas Comuns
+                        </h3>
+                    </div>
+                    <div class="row row-cols-md-2 row-cols-1">
+                        <div class="col mb-3">
+                            <div class="accordion d-flex flex-column gap-4" id="faqAccordion1">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true"
+                                            aria-controls="faq1">
+                                            Como emitir a 2ª via do IPTU?
+                                        </button>
+                                    </div>
+                                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            Acesse o menu "Acesso Rápido" ou "Serviços Online", clique em "IPTU 2025" e informe o número da inscrição do imóvel ou CPF do proprietário.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                            Como acessar o Contracheque Online?
+                                        </button>
+                                    </h2>
+                                    <div id="faq2" class="accordion-collapse collapse show"
+                                        data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            No menu "Serviços", selecione "Portal do Servidor". Utilize sua matrícula e senha para fazer login e visualizar seus contracheques e fichas financeiras.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false"
+                                            aria-controls="faq3">
+                                            Onde encontro os editais de licitação?
+                                        </button>
+                                    </h2>
+                                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                        <div class="accordion-body">
+                                            Na seção "Transparência", clique em "Licitações". Você pode filtrar por modalidade, data e status (aberta, em andamento, finalizada).
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="accordion d-flex flex-column gap-4" id="faqAccordion2">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false"
+                                            aria-controls="faq6">
+                                            Como fazer uma denúncia anônima?
+                                        </button>
+                                    </div>
+                                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                        <div class="accordion-body">
+                                            Utilize o canal da "Ouvidoria" disponível no menu principal ou na seção de "Participação Social". Você pode optar por registrar sua manifestação de forma anônima.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false"
+                                            aria-controls="faq7">
+                                            Qual o horário de atendimento da Prefeitura?
+                                        </button>
+                                    </h2>
+                                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                        <div class="accordion-body">
+                                            O atendimento presencial ocorre de segunda a sexta-feira, das 08h às 14h. Alguns serviços podem ter horários diferenciados.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false"
+                                            aria-controls="faq8">
+                                            Como solicitar informações pela LAI?
+                                        </button>
+                                    </h2>
+                                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                        <div class="accordion-body">
+                                            Acesse o sistema e-SIC (Serviço de Informação ao Cidadão) através do ícone correspondente na área de "Participação Social" e preencha o formulário de solicitação.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Faqs -->
+
+        <!-- Newsletter -->
+        <div class="section">
+            <div class="mx-auto align-items-center" style="max-width: 1770px;">
+                <div class="row row-cols-md-2 row-cols-1">
+                    <div class="col-xl-5 mb-3">
+                        <img src="criativos/imgi_24_b45a94141269945.62505afd3225f.png" class="img-fluid cta-img" alt="" style="object-fit: cover;">
+                    </div>
+                    <div class="col-xl-7 mb-3">
+                        <div class="bg-cta">
+                            <h2 class="scrollanimation animated fadeInDown adr-5 adl-2">Fique Bem Informado
+                            </h2>
+                            <p class="scrollanimation animated fadeInDown adr-5 adl-1">
+                                Receba as principais notícias, avisos e comunicados da Prefeitura diretamente no seu e-mail.
+                            </p>
+                            <div class="w-max-content scrollanimation animated fadeInDown adr-5">
+                                <a href="#" class="btn btn-accent-4">
+                                    <span>Cadastre-se na Newsletter</span>
+                                    <div class="icon-box blue">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Newsletter -->
+
+        <!-- Órgãos Parceiros -->
+        <div class="section">
+            <div class="d-flex flex-column align-items-center gap-3 mb-5">
+                <div class="bg-title second scrollanimation animated fadeInDown adr-5 adl-3">
+                    <img src="image/Vector 11.png" class="img-fluid" alt="">
+                    <h6 class="m-0">Parceiros</h6>
+                </div>
+                <h3 class="text-center scrollanimation animated fadeInDown adr-5">
+                    Órgãos e Instituições Parceiras
+                </h3>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div class="marquee-item d-flex align-items-center justify-content-center">
+                        <span class="fw-bold text-muted fs-4">TCE-SE</span>
+                    </div>
+                     <div class="marquee-item d-flex align-items-center justify-content-center">
+                        <span class="fw-bold text-muted fs-4">Ministério Público</span>
+                    </div>
+                     <div class="marquee-item d-flex align-items-center justify-content-center">
+                        <span class="fw-bold text-muted fs-4">Governo Federal</span>
+                    </div>
+                     <div class="marquee-item d-flex align-items-center justify-content-center">
+                        <span class="fw-bold text-muted fs-4">Câmara Municipal</span>
+                    </div>
+                     <div class="marquee-item d-flex align-items-center justify-content-center">
+                        <span class="fw-bold text-muted fs-4">Receita Federal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Órgãos Parceiros -->
+    </main>
+    <!-- End Main -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="section">
+            <div class="bg-footer">
+                <div class="d-flex flex-md-row flex-column justify-content-between gap-3">
+                    <img src="logos/logo_sem_fundo.png" alt="Prefeitura Barra dos Coqueiros" style="max-height: 80px; filter: brightness(0) invert(1);">
+                    <div class="wrapper-btn-footer">
+                        <a href="index.html" class="btn-footer">
+                            <p>Início</p>
+                        </a>
+                        <a href="#" class="btn-footer">
+                            <p>A Prefeitura</p>
+                        </a>
+                        <a href="#" class="btn-footer">
+                            <p>Serviços</p>
+                        </a>
+                        <a href="#" class="btn-footer">
+                            <p>Transparência</p>
+                        </a>
+                         <a href="#" class="btn-footer">
+                            <p>Fale Conosco</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-center gap-3 mb-xl-0 mb-3">
+                    <h3 class="accent-color-primary scrollanimation animated fadeInUp adr-5 text-center">Prefeitura Municipal da Barra dos Coqueiros</h3>
+                    <p class="accent-color-primary scrollanimation animated fadeInUp adr-5 adl-1 text-center">
+                        Av. Moisés Gomes Pereira, 16 - Centro, Barra dos Coqueiros - SE, 49140-000<br>
+                        Horário de Atendimento: Segunda a Sexta, das 07:00 às 13:00
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap justify-content-center">
+                        <a href="#" class="text-white small text-decoration-underline">Lei de Acesso à Informação</a>
+                        <a href="#" class="text-white small text-decoration-underline">Lei de Responsabilidade Fiscal</a>
+                        <a href="#" class="text-white small text-decoration-underline">LGPD</a>
+                        <a href="#" class="text-white small text-decoration-underline">Política de Privacidade</a>
+                    </div>
+                </div>
+                <div class="d-flex flex-lg-row flex-column gap-3 align-items-center justify-content-between mt-4 border-top pt-4" style="border-color: rgba(255,255,255,0.1) !important;">
+                    <div class="wrapper-btn-footer">
+                        <a href="#" class="btn-footer-2">
+                            <i class="fa-brands fa-xs fa-facebook-f"></i>
+                            <p>Facebook</p>
+                        </a>
+                        <a href="#" class="btn-footer-2">
+                            <i class="fa-brands fa-xs fa-instagram"></i>
+                            <p>Instagram</p>
+                        </a>
+                        <a href="#" class="btn-footer-2">
+                            <i class="fa-brands fa-xs fa-youtube"></i>
+                            <p>Youtube</p>
+                        </a>
+                    </div>
+                    <p class="accent-color-primary m-0 small">
+                        Copyright © 2025 Prefeitura Municipal da Barra dos Coqueiros. Todos os direitos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <script src=" js/vendor/bootstrap.bundle.min.js">
+    </script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper-script.js"></script>
+    <script src="js/submit-form.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <script src="js/banner-video.js"></script>
+    <script src="https://kit.fontawesome.com/a6df7668b8.js" crossorigin="anonymous"></script>
+    <script src=" js/vendor/fslightbox.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
+</body>
+
+</html>
