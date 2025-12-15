@@ -1057,6 +1057,71 @@
     </footer>
     <!-- End Footer -->
 
+    <!-- Theme Configurator -->
+    <div class="theme-configurator">
+        <button id="config-btn" class="config-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+        </button>
+        <div id="config-panel" class="config-panel">
+            <h6 class="mb-3 fw-bold">Configurações</h6>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="bannerToggle">
+                <label class="form-check-label" for="bannerToggle">Banner de Imagem</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const configBtn = document.getElementById('config-btn');
+            const configPanel = document.getElementById('config-panel');
+            const bannerToggle = document.getElementById('bannerToggle');
+            const videoContainer = document.querySelector('.video-banner-container');
+            const bannerSection = document.querySelector('.bg-banner');
+            const videoElement = videoContainer ? videoContainer.querySelector('video') : null;
+
+            if (configBtn) {
+                configBtn.addEventListener('click', () => {
+                    configPanel.classList.toggle('show');
+                });
+
+                // Close panel when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!configPanel.contains(e.target) && !configBtn.contains(e.target)) {
+                        configPanel.classList.remove('show');
+                    }
+                });
+            }
+
+            if (bannerToggle) {
+                bannerToggle.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        // Switch to Image
+                        if (videoElement) videoElement.style.display = 'none';
+                        if (bannerSection) {
+                            bannerSection.style.backgroundImage = "url('images/barra-dos-coqueiros.jpg')";
+                            bannerSection.style.backgroundSize = "cover";
+                            bannerSection.style.backgroundPosition = "center";
+                        }
+                    } else {
+                        // Switch to Video
+                        if (videoElement) videoElement.style.display = 'block';
+                        if (bannerSection) {
+                             // Revert to original CSS or clear inline style to let CSS take over
+                             // But CSS has dummy image. So we might want to keep it empty or explicit none if video covers it.
+                             // Actually, the CSS has a background image. If video is block, video covers it.
+                             bannerSection.style.backgroundImage = "";
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    
     <!-- Scripts -->
     <script src=" js/vendor/bootstrap.bundle.min.js">
     </script>
