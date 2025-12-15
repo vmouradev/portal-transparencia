@@ -2095,8 +2095,8 @@ a {
   border: none;
   aspect-ratio: 3/2;
   width: 180px;
-  top: -80px;
-  right: 0;
+  top: -100px;
+  right: -20px;
   left: auto;
   box-shadow: none;
   animation: floatPulse 4s ease-in-out infinite;
@@ -2105,8 +2105,8 @@ a {
 
 .float-hero-2 {
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 0rem;
+  right: 1rem;
   border-radius: 0;
   border: none;
   aspect-ratio: 3/2;
@@ -2114,6 +2114,7 @@ a {
   margin: 0;
   box-shadow: none;
   animation: floatPulse 4s ease-in-out infinite;
+  animation-delay: 2s;
   will-change: transform;
 }
 
