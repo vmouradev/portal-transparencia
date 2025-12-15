@@ -1,0 +1,50 @@
+
+/* Social Media Brand Colors */
+.social-item.facebook {
+  background-color: #1877F2;
+  color: #ffffff;
+  border-color: #1877F2;
+}
+
+.social-item.facebook:hover {
+  background-color: #166fe5;
+  color: #ffffff;
+  border-color: #166fe5;
+}
+
+.social-item.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #ffffff;
+}
+
+.social-item.instagram:hover {
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.social-item.youtube {
+  background-color: #FF0000;
+  color: #ffffff;
+  border-color: #FF0000;
+}
+
+.social-item.youtube:hover {
+  background-color: #e60000;
+  color: #ffffff;
+  border-color: #e60000;
+}
+
+/* Adjust position to be absolute on larger screens if needed, 
+   but based on current layout, ensuring it sits nicely at the bottom */
+@media (min-width: 1200px) {
+    .bg-banner {
+        position: relative;
+    }
+    .social-container {
+        position: absolute;
+        bottom: 40px;
+        left: 75px;
+        margin: 0 !important;
+        z-index: 10;
+    }
+}
