@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="icon" href="image/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/social-colors.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
@@ -1072,9 +1075,43 @@
         </button>
         <div id="config-panel" class="config-panel">
             <h6 class="mb-3 fw-bold">Configurações</h6>
-            <div class="form-check form-switch">
+            
+            <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" id="bannerToggle">
                 <label class="form-check-label" for="bannerToggle">Banner de Imagem</label>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="mb-3">
+                <label class="form-label small fw-bold mb-2">Cor Principal</label>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button class="btn btn-sm rounded-circle p-0 color-btn active" style="width: 24px; height: 24px; background-color: #2868ed; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#2868ed" title="Azul (Padrão)"></button>
+                    <button class="btn btn-sm rounded-circle p-0 color-btn" style="width: 24px; height: 24px; background-color: #0d6efd; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#0d6efd" title="Azul Bootstrap"></button>
+                    <button class="btn btn-sm rounded-circle p-0 color-btn" style="width: 24px; height: 24px; background-color: #198754; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#198754" title="Verde"></button>
+                    <button class="btn btn-sm rounded-circle p-0 color-btn" style="width: 24px; height: 24px; background-color: #dc3545; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#dc3545" title="Vermelho"></button>
+                    <button class="btn btn-sm rounded-circle p-0 color-btn" style="width: 24px; height: 24px; background-color: #6610f2; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#6610f2" title="Roxo"></button>
+                    <button class="btn btn-sm rounded-circle p-0 color-btn" style="width: 24px; height: 24px; background-color: #fd7e14; border: 2px solid white; outline: 1px solid #dee2e6;" data-color="#fd7e14" title="Laranja"></button>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="fontSelect" class="form-label small fw-bold">Fonte</label>
+                <select class="form-select form-select-sm" id="fontSelect">
+                    <option value='"DM Sans", sans-serif' selected>DM Sans (Padrão)</option>
+                    <option value='"Inter", sans-serif'>Inter</option>
+                    <option value='"Poppins", sans-serif'>Poppins</option>
+                    <option value='"Roboto", sans-serif'>Roboto</option>
+                </select>
+            </div>
+
+             <div class="mb-3">
+                <label for="layoutSelect" class="form-label small fw-bold">Layout</label>
+                <select class="form-select form-select-sm" id="layoutSelect">
+                    <option value="standard" selected>Padrão (1440px)</option>
+                    <option value="compact">Compacto (1140px)</option>
+                    <option value="full">Largura Total (100%)</option>
+                </select>
             </div>
         </div>
     </div>
@@ -1089,12 +1126,11 @@
             const bannerSection = document.querySelector('.bg-banner');
             const videoElement = videoContainer ? videoContainer.querySelector('video') : null;
 
+            // Toggle Panel
             if (configBtn) {
                 configBtn.addEventListener('click', () => {
                     configPanel.classList.toggle('show');
                 });
-
-                // Close panel when clicking outside
                 document.addEventListener('click', (e) => {
                     if (!configPanel.contains(e.target) && !configBtn.contains(e.target)) {
                         configPanel.classList.remove('show');
@@ -1102,10 +1138,10 @@
                 });
             }
 
+            // Banner Toggle
             if (bannerToggle) {
                 bannerToggle.addEventListener('change', (e) => {
                     if (e.target.checked) {
-                        // Switch to Image
                         if (videoElement) videoElement.style.display = 'none';
                         if (bannerSection) {
                             bannerSection.style.backgroundImage = "url('images/barra-dos-coqueiros.jpg')";
@@ -1113,15 +1149,42 @@
                             bannerSection.style.backgroundPosition = "center";
                         }
                     } else {
-                        // Switch to Video
                         if (videoElement) videoElement.style.display = 'block';
                         if (bannerSection) {
-                             // Revert to original CSS or clear inline style to let CSS take over
-                             // But CSS has dummy image. So we might want to keep it empty or explicit none if video covers it.
-                             // Actually, the CSS has a background image. If video is block, video covers it.
                              bannerSection.style.backgroundImage = "";
                         }
                     }
+                });
+            }
+
+            // Color Picker
+            const colorBtns = document.querySelectorAll('.color-btn');
+            colorBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    colorBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const color = btn.getAttribute('data-color');
+                    document.documentElement.style.setProperty('--accent-color', color);
+                });
+            });
+
+            // Font Selector
+            const fontSelect = document.getElementById('fontSelect');
+            if (fontSelect) {
+                fontSelect.addEventListener('change', (e) => {
+                    document.documentElement.style.setProperty('--font-1', e.target.value);
+                });
+            }
+
+            // Layout Selector
+            const layoutSelect = document.getElementById('layoutSelect');
+            if (layoutSelect) {
+                layoutSelect.addEventListener('change', (e) => {
+                    const val = e.target.value;
+                    let width = '1440px';
+                    if (val === 'compact') width = '1140px';
+                    if (val === 'full') width = '100%';
+                    document.documentElement.style.setProperty('--container-width', width);
                 });
             }
         });
