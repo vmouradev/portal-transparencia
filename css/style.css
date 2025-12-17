@@ -393,6 +393,43 @@ img {
   padding: 20px 12px 20px 20px;
   border-radius: 50rem;
   margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Header Styles */
+.header-full .bg-header {
+  border-radius: 0;
+  margin-top: 0;
+  max-width: 100% !important;
+  padding: 15px 40px;
+}
+
+.header-glass .bg-header {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-dark .bg-header {
+  background-color: #727272;
+  color: #ffffff;
+}
+
+.header-dark .nav-link,
+.header-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.header-dark .nav-link:hover,
+.header-dark .nav-link.active {
+  color: #ffffff !important;
+}
+
+/* Ensure full width container for full style */
+.header-full {
+  max-width: 100% !important;
 }
 
 .bg-title {

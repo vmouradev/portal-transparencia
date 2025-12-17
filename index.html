@@ -112,7 +112,7 @@
     <!-- Main -->
     <main>
         <!-- Banner -->
-        <div class="section mt-5">
+        <div class="section mt-5" style="padding-bottom: 5rem;">
             <div class="mx-auto d-flex justify-content-center align-items-center" style="max-width: 1770px;">
                 <div class="row row-cols-xl-2 row-cols-1">
                     <div class="col col-xl-8 mb-3 bg-banner">
@@ -189,7 +189,7 @@
         <!-- End Banner -->
 
         <!-- Acesso Rápido -->
-        <div class="section">
+        <div class="section" style="padding-top: 1rem;">
             <div class="r-container">
                 <div class="d-flex flex-column gap-3 align-items-center mb-5">
                     <div class="bg-title second scrollanimation animated fadeInUp adr-5">
@@ -774,7 +774,7 @@
         <!-- End Participação Popular -->
 
         <!-- Dados Abertos -->
-        <div class="section bg-banner" style="background-image: url('image/dados-abertos.jpg'); min-height: 600px;">
+        <div class="section bg-banner" style="background-image: url('criativos/dados-abertos.png'); min-height: 600px;">
             <div class="r-container">
                 <div class="d-flex flex-column gap-5">
                     <div class="d-flex flex-md-row flex-column justify-content-between">
@@ -1113,6 +1113,16 @@
                     <option value="full">Largura Total (100%)</option>
                 </select>
             </div>
+
+            <div class="mb-3">
+                <label for="headerStyleSelect" class="form-label small fw-bold">Estilo do Menu</label>
+                <select class="form-select form-select-sm" id="headerStyleSelect">
+                    <option value="standard" selected>Flutuante (Padrão)</option>
+                    <option value="full">Expandido (Full Width)</option>
+                    <option value="glass">Glassmorphism (Vidro)</option>
+                    <option value="dark">Modo Escuro</option>
+                </select>
+            </div>
         </div>
     </div>
 
@@ -1185,6 +1195,26 @@
                     if (val === 'compact') width = '1140px';
                     if (val === 'full') width = '100%';
                     document.documentElement.style.setProperty('--container-width', width);
+                });
+            }
+
+            // Header Style Selector
+            const headerStyleSelect = document.getElementById('headerStyleSelect');
+            const headerContainer = document.getElementById('header');
+            if (headerStyleSelect && headerContainer) {
+                headerStyleSelect.addEventListener('change', (e) => {
+                    const val = e.target.value;
+                    
+                    // Reset classes
+                    headerContainer.classList.remove('header-full', 'header-glass', 'header-dark');
+                    
+                    if (val === 'full') {
+                        headerContainer.classList.add('header-full');
+                    } else if (val === 'glass') {
+                        headerContainer.classList.add('header-glass');
+                    } else if (val === 'dark') {
+                        headerContainer.classList.add('header-dark');
+                    }
                 });
             }
         });
